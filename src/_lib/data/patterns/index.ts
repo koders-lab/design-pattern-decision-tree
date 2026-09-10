@@ -20,6 +20,11 @@ import { command } from "./command";
 import { chainOfResponsibility } from "./chain-of-responsibility";
 import { templateMethod } from "./template-method";
 
+// Import your microservices patterns
+import { circuitBreaker } from "../microservices/circuit-breaker";
+import { saga } from "../microservices/saga";
+import { decompositionByBusinessCapability } from "../microservices/decomposition";
+
 const ALL_PATTERNS: readonly PatternDefinition[] = [
   singleton,
   builder,
@@ -38,6 +43,10 @@ const ALL_PATTERNS: readonly PatternDefinition[] = [
   command,
   chainOfResponsibility,
   templateMethod,
+  // Added microservices patterns
+  circuitBreaker,
+  saga,
+  decompositionByBusinessCapability,
 ];
 
 const PATTERN_MAP = new Map<string, PatternDefinition>(

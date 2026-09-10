@@ -2,7 +2,7 @@ import type { Brand } from "@/_lib/utils/brand";
 
 export type PatternCategoryId = Brand<string, "PatternCategoryId">;
 
-export const CATEGORIES = ["creational", "structural", "behavioral"] as const;
+export const CATEGORIES = ["creational", "structural", "behavioral","resilience","data-management"] as const;
 
 type CategoryKey = (typeof CATEGORIES)[number];
 
@@ -31,6 +31,18 @@ const CATEGORY_INFO: Record<CategoryKey, CategoryInfo> = {
     name: "Behavioral",
     description: "Behavior keeps changing, conditionals keep growing",
     icon: "bolt",
+  },
+  resilience: {
+    id: createCategoryId("resilience"),
+    name: "Resilience",
+    description: "Patterns that ensure system reliability and fault tolerance under failure.",
+    icon: "shield",
+  },
+  "data-management": {
+    id: createCategoryId("data-management"),
+    name: "Data Management",
+    description: "Patterns for managing data consistency and distribution across services.",
+    icon: "database",
   },
 };
 

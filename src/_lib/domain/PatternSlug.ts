@@ -20,6 +20,13 @@ export const PATTERN_SLUGS = [
   "command",
   "chain-of-responsibility",
   "template-method",
+  // Add your new microservices slugs here:
+  "circuit-breaker",
+  "saga",
+  "decomposition-by-business-capability",
+  "retry",
+  "bulkhead",
+  "cqrs",
 ] as const;
 
 export function createPatternSlug(value: string): PatternSlug {
